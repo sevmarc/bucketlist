@@ -1,24 +1,36 @@
 import osmnx as ox
 import folium
 from geopy.geocoders import Nominatim
+import glob, os
+from pathlib import Path, PosixPath
 
 
-target_file = "bucketlist/PLACES/EUROPE/Scotland.md"
+keyword = '<!--- LOC --->'  # this marks the locations in *.md files
 
-keyword = '<!--- LOC --->'
-
-letters = 'abcdefghijklmnopqrstuvwxyz'
+letters = 'abcdefghijklmnopqrstuvwxyz'  # used to distinguish letters
 
 
-def parse_places(filename: str=target_file) -> list[str]:
+def list_filenames(main_path: str='bucketlist/PLACES', file_extension: str='md') -> list[PosixPath]:
+    """ Lists all files under main_path with file_extension extension """
+    results = []
+    for path in Path(main_path).rglob(f'*.{file_extension}'):
+        results.append(path)
+    return results
+
+def parse_places() -> list[str]:
+    """ 
+    Calls list_filenames, finds every location using the keyword, 
+    then parses them into clean format, usable for map plotting.
+    """
     places_raw = []
     
-    with open(target_file) as tf:
-        lines = tf.readlines()
-    
-    for ind, line in enumerate(lines):
-        if keyword in line:
-            places_raw.append(lines[ind + 1])
+    for filename in list_filenames():
+        with open(filename) as tf:
+            lines = tf.readlines()
+        
+        for ind, line in enumerate(lines):
+            if keyword in line:
+                places_raw.append(lines[ind + 1])
     
     return [parse_line(place) for place in places_raw]
 
@@ -40,16 +52,18 @@ def parse_line(place_raw: str) -> str:
     # print(place)
     return place
 
+
 def plot_location(locations: list[str]):
     loc = Nominatim(user_agent="getLoc")
     
+    # creating map, around origo, zoom can be reconfigured
     origo = loc.geocode('Budapest, Hungary')
     orig_xy = [origo.latitude, origo.longitude]
     m = folium.Map(orig_xy, zoom_start=3)
 
     for location in locations:
-        getLoc = loc.geocode(location)
-        folium.CircleMarker(location=[getLoc.latitude, getLoc.longitude]).add_to(m)
+        get_loc = loc.geocode(location)
+        folium.CircleMarker(location=[get_loc.latitude, get_loc.longitude]).add_to(m)
     m.save('bucketlist.html')
 
 
