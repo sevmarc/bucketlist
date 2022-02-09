@@ -78,7 +78,10 @@ def plot_location(locations: list[str]):
 
     for location in locations:
         get_loc = loc.geocode(location)
-        folium.CircleMarker(location=[get_loc.latitude, get_loc.longitude]).add_to(m)
+        if get_loc:
+            folium.CircleMarker(location=[get_loc.latitude, get_loc.longitude]).add_to(m)
+        else:
+            print(f'\'{location}\' was not understood. ')
     m.save('bucketlist.html')
 
 
