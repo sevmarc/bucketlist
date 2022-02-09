@@ -15,5 +15,5 @@ This is my interactive bucketlist
         `pip install geopy`  
         (in the future, a docker image may be provided for environment)
     - Activate setup:  
-        `conda activate ox`
+        `conda activate ox`  
     Just run the file, the outout will be: `bucketlist.html` containing the OSM map
