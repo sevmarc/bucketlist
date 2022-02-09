@@ -17,3 +17,6 @@ This is my interactive bucketlist
     - Activate setup:  
         `conda activate ox`  
     Just run the file, the outout will be: `bucketlist.html` containing the OSM map
+
+# Map
+See the map source [here](https://github.com/sevmarc/bucketlist/blob/main/bucketlist.html)
