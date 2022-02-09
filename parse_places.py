@@ -36,6 +36,11 @@ def parse_places() -> list[str]:
 
 
 def parse_line(place_raw: str) -> str:
+    """ 
+    Takes a raw place input (raw line from the md document, 
+    and cuts only the real geographic name from it;
+    this can then be understood by the geocoder. 
+    """
     place_raw_small = place_raw.lower()
     start_loc, end_loc = 0, 0
     looking_started = False
@@ -49,11 +54,21 @@ def parse_line(place_raw: str) -> str:
                 end_loc = i
                 break 
     place = place_raw_small[start_loc:end_loc]
-    # print(place)
+    
     return place
 
 
 def plot_location(locations: list[str]):
+    """
+    Creates a map around origo;
+    adds any location that was passed as a marker.
+    In the future, the marker color could represent
+    whether the location has been visited or not.
+    
+    TODO: exception handling for when the location 
+    name is not understood, some sort of warning 
+    should be presented to the user (me)
+    """
     loc = Nominatim(user_agent="getLoc")
     
     # creating map, around origo, zoom can be reconfigured
