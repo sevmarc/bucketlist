@@ -25,9 +25,10 @@
 	
 			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Old_Man_of_Storr%2C_Isle_of_Skye%2C_Scotland_-_Diliff.jpg/1920px-Old_Man_of_Storr%2C_Isle_of_Skye%2C_Scotland_-_Diliff.jpg" alt="The Old Man of Storr" width="200"/>
 
-
+	<!--- LOC --->
 	- [Isle of Mull](https://en.wikipedia.org/wiki/Isle_of_Mull)
-		- Largest Settlement: [Tobermory](https://en.wikipedia.org/wiki/Tobermory,_Mull)
+		<!--- LOC --->
+		- [Tobermory](https://en.wikipedia.org/wiki/Tobermory,_Mull): largest settlement
 		
 		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Tobermory_waterfront.jpg/1280px-Tobermory_waterfront.jpg" alt="Tobermory waterfront" width="200"/>
 
@@ -35,16 +36,21 @@
 
 - ## Outer-Hebrides
 	- Lewis and Harris
+		<!--- LOC --->
 		- [Stornoway](https://en.wikipedia.org/wiki/Stornoway)
 			- The town's population is around 6,953, making it by far the largest town in the [Outer Hebrides](https://en.wikipedia.org/wiki/Outer_Hebrides)
+		<!--- LOC --->
 		- [Callanish Stones](https://en.wikipedia.org/wiki/Callanish_Stones)
 
 			<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Callanish_standing_stones_1.jpg" alt="Callanish Stones" width="200"/>
+	
+	<!--- LOC --->
 	- [St Kilda](https://en.wikipedia.org/wiki/St_Kilda,_Scotland): Remote archipelago
 		
 		<img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Cleit_above_Village_Bay.jpg" alt="Cleit" width="200"/>
 		
 		<img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Boreray_and_the_Stacs.jpg" alt="Boreray" width="200"/>
 	
+	<!--- LOC --->
 	- [North Rona](https://en.wikipedia.org/wiki/North_Rona): most remote island in the UK
 	

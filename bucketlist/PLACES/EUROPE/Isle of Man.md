@@ -8,6 +8,7 @@ Interesting cultural points:
 - Celtic nation
 - Burial mounds (bronze age)
 - Space commerce -> private space travel companies
+<!--- LOC --->
 - [Peel Castle](https://en.wikipedia.org/wiki/Peel_Castle "Peel Castle")
 - Fairies -> [Fairy Bridge](https://en.wikipedia.org/wiki/Fairy_Bridge_(Isle_of_Man)
 - _spuds and herrin_ -> boiled potatoes and herring
@@ -16,4 +17,5 @@ Interesting cultural points:
 	<img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Manx_loaghtan.jpg" alt="Manx Loaghtan" width="200"/>
 
 - The "TT" -> [motorrace](https://en.wikipedia.org/wiki/Isle_of_Man_TT)
-Capital: [Douglas](https://en.wikipedia.org/wiki/Douglas,_Isle_of_Man)
+<!--- LOC --->
+[Douglas](https://en.wikipedia.org/wiki/Douglas,_Isle_of_Man): Capital
